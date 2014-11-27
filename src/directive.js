@@ -5,7 +5,7 @@ app.directive('searchableList', function () {
     restrict: 'E',
     transclude: true,
     replace: true,
-    template: '<div class="searchlist"><form><input placeholder="Search" type="text" ng-change="query()" ng-model="term" /></form><ul ng-transclude></ul></div>',
+    template: '<div class="searchlist"><form><span><input placeholder="Search" type="text" ng-change="query()" ng-model="term" /></form></span><ul ng-transclude></ul></div>',
     scope: {
       result:'=',
       items:'=',
