@@ -22,7 +22,7 @@
         <pre>&lt;searchable-list&gt;&lt;/searchable-list&gt;</pre>
         <h4>Results</h4>
 
-        <searchable-list items="testList" term="testModel" search="search">
+        <searchable-list items="testList" result="testModel" search="search">
           <li ng-if="testList.length > 0">Please Select One</li>
           <li ng-if="testList.length === 0">No Results</li>
             <li searchable-list-item="item" ng-repeat="item in testList">

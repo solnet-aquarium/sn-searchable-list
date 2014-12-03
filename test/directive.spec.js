@@ -70,8 +70,8 @@ describe('searchableList Directives', function () {
     var list;
     beforeEach(function(){
       list = element.find('li');
-      list[0].click();
-      list[1].click();
+      $(list[0]).trigger('click'); // just in case .click() decides not to work
+      $(list[1]).trigger('click'); // don't laugh it happened
     });
 
     it('should only highlight one element in the list', function() {
