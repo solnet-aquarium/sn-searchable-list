@@ -19,8 +19,14 @@ items - this is for your list of items to filter
 result - for the final selection
 search - your filter function
 
-Setup your search function for the directive
+be aware within the directive there is filtering hardcoded in the controller
+
+```javascript
+$scope.items = $filter('orderBy')($scope.items, 'name'); //change name to whatever value you are showing
 ```
+
+Setup your search function for the directive
+```javascript
 $scope.search = function(term) {
     //fllter list
     if(term.length === 0) {
