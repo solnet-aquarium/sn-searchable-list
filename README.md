@@ -15,6 +15,10 @@ gulp serve
 
 How to use
 
+items - this is for your list of items to filter
+result - for the final selection
+search - your filter function
+
 Setup your search function for the directive
 ```
 $scope.search = function(term) {
