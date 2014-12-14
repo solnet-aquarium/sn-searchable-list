@@ -2,8 +2,7 @@
 var app = angular.module('demo', ['ngSanitize', 'searchListDirective']);
 
 app.controller('demoCtrl', function($scope, $filter){
-  var arrayList = [{'name':'test'},{'name':'Bongo'},{'name':'Anton'},{'name':'Racing'},{'name':'Flying'},{'name':'test'},{'name':'Bongo'},{'name':'Anton'},{'name':'Racing'},{'name':'Flying'}];
-  $scope.testList = angular.copy(arrayList);
+  $scope.testList = [{'name':'test'},{'name':'Bongo'},{'name':'Anton'},{'name':'Racing'},{'name':'Flying'},{'name':'test'},{'name':'Bongo'},{'name':'Anton'},{'name':'Racing'},{'name':'Flying'}];
   $scope.testModel = '';
 
   $scope.search = function(term) {

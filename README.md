@@ -19,7 +19,7 @@ items - this is for your list of items to filter
 result - for the final selection
 search - your filter function
 
-be aware within the directive there is filtering hardcoded in the controller
+ordering is your responsibility
 
 ```javascript
 $scope.items = $filter('orderBy')($scope.items, 'name'); //change name to whatever value you are showing
@@ -43,7 +43,8 @@ The demo shows a working example of this directive.
 
 Pull requests welcome - must have tests!!
 
-gulp test
+gulp test -- this will compile but unfortunetly doesn't test correctly
+karma run -- this should pass
 
 ### License
 MIT

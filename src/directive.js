@@ -11,40 +11,39 @@ app.directive('searchableList', function () {
       items:'=',
       search: '='
     },
-    controller: function($scope, $filter) {
-      $scope.term = '';
+    controller: function ($scope, $filter) {
+          $scope.term = '';
+          var fullItems = angular.copy($scope.items);
+          $scope.hideSearch = $scope.items.length < 10;
 
-      $scope.items = $filter('orderBy')($scope.items, 'name');
+          this.activate = function (item) {
+            $scope.result = $scope.active = item;
+          };
 
-      this.activate = function(item) {
-          $scope.result = $scope.active = item;
+          this.isActive = function (item) {
+            return $scope.result === item;
+          };
+
+          $scope.isVisible = function () {
+            return !$scope.hide && ($scope.focused || $scope.mousedOver);
+          };
+
+          $scope.query = function () {
+            var query = $scope.search($scope.term, fullItems);
+
+            $scope.items = query;
+          };
+
+        },
+        link: {
+          pre: function preLink(scope, element, attrs) {
+          },
+          post: function postLink(scope, element, attrs) {
+
+          }
+        }
       };
-
-      this.isActive = function(item) {
-          return $scope.active === item;
-      };
-
-      $scope.isVisible = function() {
-          return !$scope.hide && ($scope.focused || $scope.mousedOver);
-      };
-
-      $scope.query = function() {
-        var query = $scope.search($scope.term);
-
-        $scope.items = $filter('orderBy')(query, 'name');
-      };
-
-    },
-    link: {
-      pre: function preLink(scope, element, attrs) {
-        scope.notice = 'Please Select One';
-      },
-      post: function postLink(scope, element, attrs) {
-
-      }
-    }
-  };
-});
+    });
 
 
 app.directive('searchableListItem', function() {

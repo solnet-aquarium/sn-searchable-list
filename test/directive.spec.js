@@ -43,7 +43,7 @@ describe('searchableList Directives', function () {
     scope.search = searchFunc;
 
     element = createDirective('<searchable-list items="testList" result="testModel" search="search">' +
-            '<li searchable-list-item="item" ng-repeat="item in testList">{{ item.name }}</li>' +
+            '<li searchable-list-item="item" ng-repeat="item in testList | orderBy:\'name\'">{{ item.name }}</li>' +
             '</searchable-list>');
 
   }));
