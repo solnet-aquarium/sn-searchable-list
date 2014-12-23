@@ -1,6 +1,10 @@
-node_modules
+# Directories
 bower_components
+coverage
+dist
+node_modules
+
+# Files
 *.log
 .DS_Store
 .idea
-dist
