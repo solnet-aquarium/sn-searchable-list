@@ -5,7 +5,9 @@
   "repository": "git@github.com:mohsen1/angular-directive-boilerplate.git",
   "main": "dist/directive.js",
   "scripts": {
-    "test": "./node_modules/gulp/bin/gulp.js test"
+    "pretest": "npm install && bower install",
+    "test": "./node_modules/gulp/bin/gulp.js test",
+    "test-watch": "./node_modules/nodemon/bin/nodemon.js -w src/ -w test/ -x './node_modules/gulp/bin/gulp.js test'"
   },
   "keywords": [
     "angularjs",
