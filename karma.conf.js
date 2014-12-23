@@ -32,15 +32,6 @@ module.exports = function(config) {
 
         // Enable / disable watching file and executing tests whenever any file changes
         autoWatch: true,
-
-        // Start these browsers, currently available:
-        // - Chrome
-        // - ChromeCanary
-        // - Firefox
-        // - Opera
-        // - Safari (only Mac)
-        // - PhantomJS
-        // - IE (only Windows)
         browsers: [
             process.env.TRAVIS ? 'PhantomJS' : 'Chrome'
         ],
