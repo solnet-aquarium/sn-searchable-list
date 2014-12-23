@@ -3,11 +3,11 @@
 This is a simple AngularJS directive to filter a list for mobile with highlighting of selected elements as well as presenting
 information to the user about the state of the list
 
-#### Using the boilerplate
+## Using the boilerplate
 Clone the project and install dependencies, then use Gulp to start the project.
 ```shell
 git clone git@github.com:solnetdigital/angular-searchable-list.git searchable-list
-cd my-directive
+cd searchable-list
 npm install
 bower install
 gulp serve
@@ -33,18 +33,31 @@ $scope.search = function(term) {
       return arrayList;
     }
     return $filter('orderBy')($filter('filter')(arrayList, term), 'name');
-  };
 ```
+};
 
 The list itself is on the controller scope.
 
 The demo shows a working example of this directive.
 
+## Contributions
 
-Pull requests welcome - must have tests!!
+Pull requests welcome - must have tests!
 
-gulp test -- this will compile but unfortunetly doesn't test correctly
-karma run -- this should pass
+## Testing
+
+### Single run
+
+`npm test`
+
+This will install dependencies and run a single test
+
+### Continuous testing
+
+`npm run test-watch`
+
+This will watch the `src/` and `test/` directories and run the test suite when any changes are detected.
 
 ### License
+
 MIT
