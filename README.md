@@ -1,12 +1,21 @@
-# Searchable List Directive
+
+# Searchable List Directive - including Ionic Scrollable Searchable List version
 [![Build Status](https://travis-ci.org/solnetdigital/sn-searchable-list.svg?branch=master)](https://travis-ci.org/solnetdigital/sn-searchable-list)
 [![Code Climate](https://codeclimate.com/github/solnetdigital/sn-searchable-list/badges/gpa.svg)](https://codeclimate.com/github/solnetdigital/sn-searchable-list)
 [![Test Coverage](https://codeclimate.com/github/solnetdigital/sn-searchable-list/badges/coverage.svg)](https://codeclimate.com/github/solnetdigital/sn-searchable-list)
 
+>>>>>>> added ionic version and touch ups to the README
+
 This is a simple AngularJS directive to filter a list for mobile with highlighting of selected elements as well as presenting
 information to the user about the state of the list
 
+<<<<<<< HEAD
 ## Using the boilerplate
+=======
+The Ionic version has more features such as restoring to an item in the list as previously selected using ionic scroll.
+
+#### Using the boilerplate
+>>>>>>> added ionic version and touch ups to the README
 Clone the project and install dependencies, then use Gulp to start the project.
 ```shell
 git clone git@github.com:solnetdigital/angular-searchable-list.git searchable-list
